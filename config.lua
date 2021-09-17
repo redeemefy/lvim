@@ -8,19 +8,29 @@ an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
--- general
-lvim.log.level = "warn"
-lvim.format_on_save = true
-lvim.lint_on_save = true
+-- Additional Plugins
+lvim.plugins = {
+--     {"folke/tokyonight.nvim"}, {
+--         "ray-x/lsp_signature.nvim",
+--         config = function() require"lsp_signature".on_attach() end,
+--         event = "InsertEnter"
+--     }
+  { "marko-cerovac/material.nvim" }
+}
 
--- Theme
+-- System
+require("system")
+
+-- UI
+require("ui")
 require("theme")
+-- require("lualine")
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 require("keybindings")
 
 -- add your own keymapping
-lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
+-- lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- lvim.keys.visual_mode["vv"] = "<Escape>"
 -- unmap a default keymapping
 -- lvim.keys.normal_mode["<C-Up>"] = ""
@@ -32,7 +42,7 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 --   local actions = require "telescope.actions"
 --   -- for input mode
 --   lvim.builtin.telescope.defaults.mappings.i["<C-j>"] = actions.move_selection_next
---   lvim.builtin.telescope.defaults.mappings.i["<C-k>"] = actions.move_selection_previous
+--   lvim.builtin.telescope.defaults.mappings.i["<C-k>"] = actions.move_selection_previouskkk
 --   lvim.builtin.telescope.defaults.mappings.i["<C-n>"] = actions.cycle_history_next
 --   lvim.builtin.telescope.defaults.mappings.i["<C-p>"] = actions.cycle_history_prev
 --   -- for normal mode
@@ -105,15 +115,6 @@ lvim.builtin.treesitter.highlight.enabled = true
 --   }
 -- }
 
--- Additional Plugins
-lvim.plugins = {
---     {"folke/tokyonight.nvim"}, {
---         "ray-x/lsp_signature.nvim",
---         config = function() require"lsp_signature".on_attach() end,
---         event = "InsertEnter"
---     }
-  {"marko-cerovac/material.nvim"}
-}
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- lvim.autocommands.custom_groups = {
