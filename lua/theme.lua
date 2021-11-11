@@ -9,6 +9,6 @@ require("material").setup({
   }
 })
 lvim.colorscheme = "material"
-vim.g.material_style = "lighter"
+vim.g.material_style = "palenight"
 lvim.builtin.lualine.options.theme = "material-nvim"
 

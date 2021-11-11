@@ -108,12 +108,12 @@ lvim.builtin.treesitter.highlight.enabled = true
 --   }
 -- }
 -- set an additional linter
--- lvim.lang.python.linters = {
---   {
---     exe = "flake8",
---     args = {}
---   }
--- }
+lvim.lang.python.linters = {
+  {
+    exe = "flake8",
+    args = {}
+  }
+}
 
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
