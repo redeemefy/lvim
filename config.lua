@@ -8,26 +8,20 @@ an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
--- Additional Plugins
-lvim.plugins = {
---     {"folke/tokyonight.nvim"}, {
---         "ray-x/lsp_signature.nvim",
---         config = function() require"lsp_signature".on_attach() end,
---         event = "InsertEnter"
---     }
-  { "marko-cerovac/material.nvim" }
-}
+-- Telescope
+require("user.telescope")
 
 -- System
-require("system")
+require("user.system")
+require("user.plugins")
 
 -- UI
-require("ui")
-require("theme")
+require("user.ui")
+require("user.theme")
 -- require("lualine")
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
-require("keybindings")
+require("user.keybindings")
 
 -- add your own keymapping
 -- lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
