@@ -18,3 +18,8 @@ lvim.builtin.which_key.mappings["W"] = {
   }
 }
 
+-- Move Lines up/down
+-- normal mode
+lvim.keys.normal_mode["∆"] = ":m+<CR>=="
+lvim.keys.normal_mode["˚"] = ":m-2<CR>=="
+
